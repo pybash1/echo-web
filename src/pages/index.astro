@@ -1,11 +1,65 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
 ---
 
 <Layout>
-	<Welcome />
+  <main class="dots h-full">
+    <nav class="py-4 px-8 flex items-center justify-between">
+      <a href="/" class="font-serif text-3xl font-semibold">Echo</a>
+      <div class="flex gap-4 items-center">
+        <a
+          href="https://twitter.com/py_bash1"
+          class="hover:opacity-60 transition ease-in-out duration-500"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://github.com/pybash1/echo"
+          class="hover:opacity-60 transition ease-in-out duration-500"
+        >
+          Twitter</a
+        >
+      </div>
+    </nav>
+    <div class="flex items-center justify-center flex-col gap-8 pt-24">
+      <div class="font-mono text-5xl -rotate-4 text-center">
+        love mac but not iphone?<br />this app is for you
+      </div>
+      <div class="py-10">
+        <a
+          href="https://github.com/pybash1/echo"
+          class="bg-black text-white rounded-full px-6 py-3 hover:bg-black/80 font-medium transition ease-in-out duration-500"
+          >Start Syncing</a
+        >
+      </div>
+      <div class="w-lg flex flex-col gap-2">
+        <div class="font-serif text-3xl">Copy here. Paste there.</div>
+        <div class="text-gray-700">
+          Echo lets you copy from one device and paste on the other
+          effortlessly. Just run the app once on both devices and it'll figure
+          out the rest.
+        </div>
+      </div>
+      <div class="w-lg flex flex-col gap-2">
+        <div class="font-serif text-gray-500 text-3xl flex items-center gap-2">
+          Notifications? We got that too. <span
+            class="text-xs font-sans bg-gray-100 px-2 py-0.5 rounded-full"
+            >Coming soon</span>
+        </div>
+        <div class="text-gray-500">
+          Echo lets you copy from one device and paste on the other
+          effortlessly. Just run the app once on both devices and it'll figure
+          out the rest.
+        </div>
+      </div>
+      <div>
+        <p class="text-gray-500 max-w-lg text-center leading-relaxed">
+          Spotted something cool on your mac, but struggling to open it on your
+          phone? Don't fret, echo syncs your clipboard effortlessly between your
+          two favorite devices!
+        </p>
+      </div>
+    </div>
+  </main>
 </Layout>

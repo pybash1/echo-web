@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Handwriting";
+  src: url("/fonts/Handwriting.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Perfectly Nineties";
+  src: url("/fonts/PerfectlyNinetiesRegular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("/fonts/matter/Matter-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("/fonts/matter/Matter-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("/fonts/matter/Matter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("/fonts/matter/Matter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("/fonts/matter/Matter-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("/fonts/matter/Matter-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("/fonts/matter/Matter-Heavy.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("/fonts/matter/Matter-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@theme {
+  --font-sans: "Matter", "sans-serif";
+  --font-mono: "Handwriting", "mono";
+  --font-serif: "Perfectly Nineties", "serif";
+}
+
+.dots {
+  background-color: #ffffff;
+  opacity: 1;
+  background-image: radial-gradient(#d1d1d1 0.5px, transparent 0.5px),
+    radial-gradient(#d1d1d1 0.5px, #ffffff 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
