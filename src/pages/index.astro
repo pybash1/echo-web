@@ -5,61 +5,157 @@ import "../styles/global.css";
 
 <Layout>
   <main class="dots h-full">
-    <nav class="py-4 px-8 flex items-center justify-between">
-      <a href="/" class="font-serif text-3xl font-semibold">Echo</a>
-      <div class="flex gap-4 items-center">
+    <nav class="py-4 px-4 md:px-8 flex items-center justify-between">
+      <a href="/" class="font-serif text-2xl md:text-3xl font-semibold">Board</a
+      >
+      <div class="flex gap-2 md:gap-4 items-center text-sm md:text-base">
         <a
-          href="https://twitter.com/py_bash1"
+          href="https://github.com/pybash1/echo"
           class="hover:opacity-60 transition ease-in-out duration-500"
         >
           GitHub
         </a>
         <a
-          href="https://github.com/pybash1/echo"
+          href="https://twitter.com/py_bash1"
           class="hover:opacity-60 transition ease-in-out duration-500"
         >
           Twitter</a
         >
       </div>
     </nav>
-    <div class="flex items-center justify-center flex-col gap-8 pt-24">
-      <div class="font-mono text-5xl -rotate-4 text-center">
-        love mac but not iphone?<br />this app is for you
+    <div
+      class="flex items-center justify-center flex-col gap-6 md:gap-8 pt-12 md:pt-24 px-4"
+    >
+      <div
+        class="font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl -rotate-2 md:-rotate-4 text-center"
+      >
+        Universal clipboard sync<br />across all your devices
       </div>
-      <div class="py-10">
+      <div
+        class="py-6 md:py-10 flex flex-col sm:flex-row gap-3 md:gap-4 justify-center w-full max-w-md"
+      >
         <a
-          href="https://github.com/pybash1/echo"
-          class="bg-black text-white rounded-full px-6 py-3 hover:bg-black/80 font-medium transition ease-in-out duration-500"
-          >Start Syncing</a
+          id="mac-button"
+          href="https://github.com/pybash1/board"
+          class="bg-black text-white rounded-full px-4 md:px-6 py-2 md:py-3 hover:bg-black/80 font-medium transition ease-in-out duration-500 items-center gap-2 text-sm md:text-base justify-center"
+          style="display: none;"
         >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
+            ></path>
+          </svg>
+          Download for Mac
+        </a>
+        <a
+          id="android-button"
+          href="https://github.com/pybash1/echo"
+          class="bg-black text-white rounded-full px-4 md:px-6 py-2 md:py-3 hover:bg-black/80 font-medium transition ease-in-out duration-500 items-center gap-2 text-sm md:text-base justify-center"
+          style="display: none;"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zM20.5 8c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zM15.53 2.16l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48C13.85 1.23 12.95 1 12 1c-.96 0-1.86.23-2.66.63L7.85.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31C6.97 3.26 6 5.01 6 7h12c0-1.99-.97-3.75-2.47-4.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z"
+            ></path>
+          </svg>
+          Download for Android
+        </a>
+        <button
+          id="coming-soon-button"
+          class="bg-gray-400 text-white rounded-full px-4 md:px-6 py-2 md:py-3 cursor-not-allowed font-medium items-center gap-2 text-sm md:text-base justify-center"
+          style="display: none;"
+          disabled
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+            ></path>
+          </svg>
+          <span id="coming-soon-text">Coming Soon</span>
+        </button>
       </div>
-      <div class="w-lg flex flex-col gap-2">
-        <div class="font-serif text-3xl">Copy here. Paste there.</div>
-        <div class="text-gray-700">
-          Echo lets you copy from one device and paste on the other
-          effortlessly. Just run the app once on both devices and it'll figure
-          out the rest.
+      <a
+        href="/download"
+        class="-mt-14 pb-6 text-xs underline underline-offset-2"
+        >Get Board for other platforms &rarr;</a
+      >
+      <div class="w-full max-w-lg px-4 flex flex-col gap-2">
+        <div class="font-serif text-2xl md:text-3xl">
+          Copy here. Paste there.
+        </div>
+        <div class="text-gray-700 text-sm md:text-base">
+          Copy on your Mac, paste on your phone. Copy on Windows, paste on
+          Linux. Board automatically syncs your clipboard across all your
+          devices — Mac, Windows, Linux, Android, and iOS.
         </div>
       </div>
-      <div class="w-lg flex flex-col gap-2">
-        <div class="font-serif text-gray-500 text-3xl flex items-center gap-2">
-          Notifications? We got that too. <span
-            class="text-xs font-sans bg-gray-100 px-2 py-0.5 rounded-full"
+      <div class="w-full max-w-lg px-4 flex flex-col gap-2">
+        <div
+          class="font-serif text-gray-500 text-2xl md:text-3xl flex flex-col sm:flex-row items-start sm:items-center gap-2"
+        >
+          <span>Cross-platform notifications</span>
+          <span class="text-xs font-sans bg-gray-100 px-2 py-0.5 rounded-full"
             >Coming soon</span
           >
         </div>
-        <div class="text-gray-500">
-          Seamlessly sync/mirror your android notifications on your mac along
-          with notification actions & replies.
+        <div class="text-gray-500 text-sm md:text-base">
+          Get your mobile notifications directly on your desktop with full
+          support for actions and replies. Never miss an important message while
+          working, regardless of your platform.
         </div>
       </div>
-      <div>
-        <p class="text-gray-500 max-w-lg text-center leading-relaxed">
-          Spotted something cool on your mac, but struggling to open it on your
-          phone? Don't fret, echo syncs your clipboard effortlessly between your
-          two favorite devices!
+      <div class="px-4">
+        <p
+          class="text-gray-500 max-w-lg text-center leading-relaxed text-sm md:text-base"
+        >
+          Whether you're sharing links, text snippets, or important notes
+          between devices, Board makes it effortless. Set it up once and enjoy
+          seamless productivity across all your devices, all the time.
         </p>
       </div>
     </div>
   </main>
 </Layout>
+
+<script>
+  function detectPlatform() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    const macButton = document.getElementById("mac-button");
+    const androidButton = document.getElementById("android-button");
+    const comingSoonButton = document.getElementById("coming-soon-button");
+    const comingSoonText = document.getElementById("coming-soon-text");
+
+    if (userAgent.includes("mac") && !userAgent.includes("mobile")) {
+      if (macButton) {
+        macButton.style.display = "flex";
+      }
+    } else if (userAgent.includes("android")) {
+      if (androidButton) {
+        androidButton.style.display = "flex";
+      }
+    } else {
+      // Show platform-specific coming soon message
+      let platformText = "Coming Soon";
+
+      if (userAgent.includes("win")) {
+        platformText = "Coming Soon for Windows";
+      } else if (userAgent.includes("iphone") || userAgent.includes("ipad")) {
+        platformText = "Coming Soon for iOS";
+      } else if (userAgent.includes("linux")) {
+        platformText = "Coming Soon for Linux";
+      } else if (userAgent.includes("chrome")) {
+        platformText = "Coming Soon for Chrome OS";
+      }
+
+      if (comingSoonText) {
+        comingSoonText.textContent = platformText;
+      }
+      if (comingSoonButton) {
+        comingSoonButton.style.display = "flex";
+      }
+    }
+  }
+
+  // Run on page load
+  detectPlatform();
+</script>
